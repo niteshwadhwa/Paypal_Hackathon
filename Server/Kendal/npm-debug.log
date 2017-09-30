@@ -1,0 +1,574 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'canvas' ]
+2 info using npm@2.15.9
+3 info using node@v4.5.0
+4 verbose install initial load of C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\package.json
+5 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\express\package.json
+6 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\jade\package.json
+7 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\jsPDF-1.2.60\package.json
+8 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\npm-debug.log\package.json
+9 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\pdf-image\package.json
+10 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\pdf2json\package.json
+11 verbose installManyTop reading scoped package data from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\pdfreader\package.json
+12 info package.json express@3.2.6 No license field.
+13 info package.json pdf-image@1.1.0 No license field.
+14 info package.json pdf2json@1.1.7 No license field.
+15 verbose readDependencies loading dependencies from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\package.json
+16 silly cache add args [ 'canvas', null ]
+17 verbose cache add spec canvas
+18 silly cache add parsed spec Result {
+18 silly cache add   raw: 'canvas',
+18 silly cache add   scope: null,
+18 silly cache add   name: 'canvas',
+18 silly cache add   rawSpec: '',
+18 silly cache add   spec: 'latest',
+18 silly cache add   type: 'tag' }
+19 silly addNamed canvas@latest
+20 verbose addNamed "latest" is being treated as a dist-tag for canvas
+21 info addNameTag [ 'canvas', 'latest' ]
+22 silly mapToRegistry name canvas
+23 silly mapToRegistry using default registry
+24 silly mapToRegistry registry https://registry.npmjs.org/
+25 silly mapToRegistry data Result {
+25 silly mapToRegistry   raw: 'canvas',
+25 silly mapToRegistry   scope: null,
+25 silly mapToRegistry   name: 'canvas',
+25 silly mapToRegistry   rawSpec: '',
+25 silly mapToRegistry   spec: 'latest',
+25 silly mapToRegistry   type: 'tag' }
+26 silly mapToRegistry uri https://registry.npmjs.org/canvas
+27 verbose addNameTag registry:https://registry.npmjs.org/canvas not in flight; fetching
+28 verbose request uri https://registry.npmjs.org/canvas
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 7:19:43 PM
+31 verbose request id 156e9114770aae70
+32 verbose etag "4I2P0TKVC9SQJT1YY5MXH0Z5X"
+33 http request GET https://registry.npmjs.org/canvas
+34 http 304 https://registry.npmjs.org/canvas
+35 verbose headers { date: 'Sun, 25 Sep 2016 02:19:44 GMT',
+35 verbose headers   via: '1.1 varnish',
+35 verbose headers   'cache-control': 'max-age=300',
+35 verbose headers   etag: '"4I2P0TKVC9SQJT1YY5MXH0Z5X"',
+35 verbose headers   age: '143',
+35 verbose headers   connection: 'keep-alive',
+35 verbose headers   'x-served-by': 'cache-sjc3143-SJC',
+35 verbose headers   'x-cache': 'HIT',
+35 verbose headers   'x-cache-hits': '1',
+35 verbose headers   'x-timer': 'S1474769984.921269,VS0,VE0',
+35 verbose headers   vary: 'Accept-Encoding' }
+36 silly get cb [ 304,
+36 silly get   { date: 'Sun, 25 Sep 2016 02:19:44 GMT',
+36 silly get     via: '1.1 varnish',
+36 silly get     'cache-control': 'max-age=300',
+36 silly get     etag: '"4I2P0TKVC9SQJT1YY5MXH0Z5X"',
+36 silly get     age: '143',
+36 silly get     connection: 'keep-alive',
+36 silly get     'x-served-by': 'cache-sjc3143-SJC',
+36 silly get     'x-cache': 'HIT',
+36 silly get     'x-cache-hits': '1',
+36 silly get     'x-timer': 'S1474769984.921269,VS0,VE0',
+36 silly get     vary: 'Accept-Encoding' } ]
+37 verbose etag https://registry.npmjs.org/canvas from cache
+38 verbose get saving canvas to C:\Users\nitesh\AppData\Roaming\npm-cache\registry.npmjs.org\canvas\.cache.json
+39 verbose correctMkdir C:\Users\nitesh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+40 silly addNameTag next cb for canvas with tag latest
+41 silly addNamed canvas@1.5.0
+42 verbose addNamed "1.5.0" is a plain semver version for canvas
+43 silly cache afterAdd canvas@1.5.0
+44 verbose afterAdd C:\Users\nitesh\AppData\Roaming\npm-cache\canvas\1.5.0\package\package.json not in flight; writing
+45 verbose correctMkdir C:\Users\nitesh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+46 verbose afterAdd C:\Users\nitesh\AppData\Roaming\npm-cache\canvas\1.5.0\package\package.json written
+47 silly install resolved [ { name: 'canvas',
+47 silly install resolved     description: 'Canvas graphics API backed by Cairo',
+47 silly install resolved     version: '1.5.0',
+47 silly install resolved     author: { name: 'TJ Holowaychuk', email: 'tj@learnboost.com' },
+47 silly install resolved     contributors: [ [Object], [Object], [Object] ],
+47 silly install resolved     keywords:
+47 silly install resolved      [ 'canvas',
+47 silly install resolved        'graphic',
+47 silly install resolved        'graphics',
+47 silly install resolved        'pixman',
+47 silly install resolved        'cairo',
+47 silly install resolved        'image',
+47 silly install resolved        'images',
+47 silly install resolved        'pdf' ],
+47 silly install resolved     homepage: 'https://github.com/Automattic/node-canvas',
+47 silly install resolved     repository:
+47 silly install resolved      { type: 'git',
+47 silly install resolved        url: 'git://github.com/Automattic/node-canvas.git' },
+47 silly install resolved     scripts:
+47 silly install resolved      { prebenchmark: 'node-gyp build',
+47 silly install resolved        benchmark: 'node benchmarks/run.js',
+47 silly install resolved        pretest: 'node-gyp build',
+47 silly install resolved        test: 'standard examples/*.js && mocha test/*.test.js',
+47 silly install resolved        'pretest-server': 'node-gyp build',
+47 silly install resolved        'test-server': 'node test/server.js',
+47 silly install resolved        install: 'node-gyp rebuild' },
+47 silly install resolved     dependencies: { nan: '^2.3.2' },
+47 silly install resolved     devDependencies:
+47 silly install resolved      { 'body-parser': '^1.13.3',
+47 silly install resolved        express: '^4.13.2',
+47 silly install resolved        pug: '^2.0.0-beta3',
+47 silly install resolved        mocha: '*',
+47 silly install resolved        standard: '^7.1.1' },
+47 silly install resolved     engines: { node: '>=0.8.0' },
+47 silly install resolved     main: './lib/canvas.js',
+47 silly install resolved     license: 'MIT',
+47 silly install resolved     gypfile: true,
+47 silly install resolved     gitHead: '5812a8d6b84e1887520e9cdaf5596f9c2089f687',
+47 silly install resolved     bugs: { url: 'https://github.com/Automattic/node-canvas/issues' },
+47 silly install resolved     _id: 'canvas@1.5.0',
+47 silly install resolved     _shasum: 'fa1935b7e9d4fc1509a9402e1de436c7f8cc14c9',
+47 silly install resolved     _from: 'canvas@latest',
+47 silly install resolved     _npmVersion: '3.10.3',
+47 silly install resolved     _nodeVersion: '6.3.1',
+47 silly install resolved     _npmUser: { name: 'linusu', email: 'linus@folkdatorn.se' },
+47 silly install resolved     dist:
+47 silly install resolved      { shasum: 'fa1935b7e9d4fc1509a9402e1de436c7f8cc14c9',
+47 silly install resolved        tarball: 'https://registry.npmjs.org/canvas/-/canvas-1.5.0.tgz' },
+47 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+47 silly install resolved     _npmOperationalInternal:
+47 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+47 silly install resolved        tmp: 'tmp/canvas-1.5.0.tgz_1473612477339_0.7720053773373365' },
+47 silly install resolved     directories: {},
+47 silly install resolved     _resolved: 'https://registry.npmjs.org/canvas/-/canvas-1.5.0.tgz',
+47 silly install resolved     readme: 'ERROR: No README data found!' } ]
+48 info install canvas@1.5.0 into C:\Users\nitesh\Desktop\amazon_deliverables\Kendal
+49 info installOne canvas@1.5.0
+50 verbose installOne of canvas to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal not in flight; installing
+51 verbose correctMkdir C:\Users\nitesh\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+52 verbose lock using C:\Users\nitesh\AppData\Roaming\npm-cache\_locks\canvas-fbca8e7af810e5ce.lock for C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+53 silly install write writing canvas 1.5.0 to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+54 verbose unbuild node_modules\canvas
+55 silly gentlyRm C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas is being purged from base C:\Users\nitesh\Desktop\amazon_deliverables\Kendal
+56 verbose gentlyRm don't care about contents; nuking C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+57 verbose tar unpack C:\Users\nitesh\AppData\Roaming\npm-cache\canvas\1.5.0\package.tgz
+58 verbose tar unpacking to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+59 silly gentlyRm C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas is being purged
+60 verbose gentlyRm don't care about contents; nuking C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+61 silly gunzTarPerm modes [ '777', '666' ]
+62 silly gunzTarPerm extractEntry package.json
+63 silly gunzTarPerm modified mode [ 'package.json', 420, 438 ]
+64 silly gunzTarPerm extractEntry .npmignore
+65 silly gunzTarPerm modified mode [ '.npmignore', 420, 438 ]
+66 silly gunzTarPerm extractEntry index.js
+67 silly gunzTarPerm modified mode [ 'index.js', 420, 438 ]
+68 silly gunzTarPerm extractEntry History.md
+69 silly gunzTarPerm modified mode [ 'History.md', 420, 438 ]
+70 silly gunzTarPerm extractEntry Readme.md
+71 silly gunzTarPerm modified mode [ 'Readme.md', 420, 438 ]
+72 silly gunzTarPerm extractEntry binding.gyp
+73 silly gunzTarPerm modified mode [ 'binding.gyp', 493, 511 ]
+74 silly gunzTarPerm extractEntry .github/ISSUE_TEMPLATE.md
+75 silly gunzTarPerm modified mode [ '.github/ISSUE_TEMPLATE.md', 420, 438 ]
+76 silly gunzTarPerm extractEntry lib/bindings.js
+77 silly gunzTarPerm modified mode [ 'lib/bindings.js', 420, 438 ]
+78 silly gunzTarPerm extractEntry lib/canvas.js
+79 silly gunzTarPerm modified mode [ 'lib/canvas.js', 420, 438 ]
+80 silly gunzTarPerm extractEntry lib/context2d.js
+81 silly gunzTarPerm modified mode [ 'lib/context2d.js', 420, 438 ]
+82 silly gunzTarPerm extractEntry lib/image.js
+83 silly gunzTarPerm modified mode [ 'lib/image.js', 420, 438 ]
+84 silly gunzTarPerm extractEntry lib/jpegstream.js
+85 silly gunzTarPerm modified mode [ 'lib/jpegstream.js', 420, 438 ]
+86 silly gunzTarPerm extractEntry lib/pdfstream.js
+87 silly gunzTarPerm modified mode [ 'lib/pdfstream.js', 420, 438 ]
+88 silly gunzTarPerm extractEntry lib/pngstream.js
+89 silly gunzTarPerm modified mode [ 'lib/pngstream.js', 420, 438 ]
+90 silly gunzTarPerm extractEntry .travis.yml
+91 silly gunzTarPerm modified mode [ '.travis.yml', 420, 438 ]
+92 silly gunzTarPerm extractEntry src/Image.cc
+93 silly gunzTarPerm modified mode [ 'src/Image.cc', 420, 438 ]
+94 silly gunzTarPerm extractEntry src/Canvas.cc
+95 silly gunzTarPerm modified mode [ 'src/Canvas.cc', 420, 438 ]
+96 silly gunzTarPerm extractEntry src/CanvasGradient.cc
+97 silly gunzTarPerm modified mode [ 'src/CanvasGradient.cc', 420, 438 ]
+98 silly gunzTarPerm extractEntry src/CanvasGradient.h
+99 silly gunzTarPerm modified mode [ 'src/CanvasGradient.h', 420, 438 ]
+100 silly gunzTarPerm extractEntry src/CanvasPattern.cc
+101 silly gunzTarPerm modified mode [ 'src/CanvasPattern.cc', 420, 438 ]
+102 silly gunzTarPerm extractEntry src/CanvasPattern.h
+103 silly gunzTarPerm modified mode [ 'src/CanvasPattern.h', 420, 438 ]
+104 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.cc
+105 silly gunzTarPerm modified mode [ 'src/CanvasRenderingContext2d.cc', 493, 511 ]
+106 silly gunzTarPerm extractEntry src/CanvasRenderingContext2d.h
+107 silly gunzTarPerm modified mode [ 'src/CanvasRenderingContext2d.h', 420, 438 ]
+108 silly gunzTarPerm extractEntry src/FontFace.cc
+109 silly gunzTarPerm modified mode [ 'src/FontFace.cc', 493, 511 ]
+110 silly gunzTarPerm extractEntry src/FontFace.h
+111 silly gunzTarPerm modified mode [ 'src/FontFace.h', 420, 438 ]
+112 silly gunzTarPerm extractEntry src/Canvas.h
+113 silly gunzTarPerm modified mode [ 'src/Canvas.h', 420, 438 ]
+114 silly gunzTarPerm extractEntry src/Image.h
+115 silly gunzTarPerm modified mode [ 'src/Image.h', 420, 438 ]
+116 silly gunzTarPerm extractEntry src/ImageData.cc
+117 silly gunzTarPerm modified mode [ 'src/ImageData.cc', 420, 438 ]
+118 silly gunzTarPerm extractEntry src/ImageData.h
+119 silly gunzTarPerm modified mode [ 'src/ImageData.h', 420, 438 ]
+120 silly gunzTarPerm extractEntry src/JPEGStream.h
+121 silly gunzTarPerm modified mode [ 'src/JPEGStream.h', 420, 438 ]
+122 silly gunzTarPerm extractEntry src/PNG.h
+123 silly gunzTarPerm modified mode [ 'src/PNG.h', 420, 438 ]
+124 silly gunzTarPerm extractEntry src/Point.h
+125 silly gunzTarPerm modified mode [ 'src/Point.h', 420, 438 ]
+126 silly gunzTarPerm extractEntry src/closure.h
+127 silly gunzTarPerm modified mode [ 'src/closure.h', 420, 438 ]
+128 silly gunzTarPerm extractEntry src/color.cc
+129 silly gunzTarPerm modified mode [ 'src/color.cc', 420, 438 ]
+130 silly gunzTarPerm extractEntry src/color.h
+131 silly gunzTarPerm modified mode [ 'src/color.h', 420, 438 ]
+132 silly gunzTarPerm extractEntry src/init.cc
+133 silly gunzTarPerm modified mode [ 'src/init.cc', 493, 511 ]
+134 silly gunzTarPerm extractEntry util/has_lib.sh
+135 silly gunzTarPerm modified mode [ 'util/has_lib.sh', 493, 511 ]
+136 verbose write writing to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\package.json
+137 info preinstall canvas@1.5.0
+138 verbose readDependencies loading dependencies from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\package.json
+139 silly prepareForInstallMany adding nan@^2.3.2 from canvas dependencies
+140 verbose readDependencies loading dependencies from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\package.json
+141 silly cache add args [ 'nan@^2.3.2', null ]
+142 verbose cache add spec nan@^2.3.2
+143 silly cache add parsed spec Result {
+143 silly cache add   raw: 'nan@^2.3.2',
+143 silly cache add   scope: null,
+143 silly cache add   name: 'nan',
+143 silly cache add   rawSpec: '^2.3.2',
+143 silly cache add   spec: '>=2.3.2 <3.0.0',
+143 silly cache add   type: 'range' }
+144 silly addNamed nan@>=2.3.2 <3.0.0
+145 verbose addNamed ">=2.3.2 <3.0.0" is a valid semver range for nan
+146 silly addNameRange { name: 'nan', range: '>=2.3.2 <3.0.0', hasData: false }
+147 silly mapToRegistry name nan
+148 silly mapToRegistry using default registry
+149 silly mapToRegistry registry https://registry.npmjs.org/
+150 silly mapToRegistry data Result {
+150 silly mapToRegistry   raw: 'nan',
+150 silly mapToRegistry   scope: null,
+150 silly mapToRegistry   name: 'nan',
+150 silly mapToRegistry   rawSpec: '',
+150 silly mapToRegistry   spec: 'latest',
+150 silly mapToRegistry   type: 'tag' }
+151 silly mapToRegistry uri https://registry.npmjs.org/nan
+152 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+153 verbose request uri https://registry.npmjs.org/nan
+154 verbose request no auth needed
+155 info attempt registry request try #1 at 7:19:43 PM
+156 verbose etag "1YJEPM5V4XH0MZT0HV3B8R9BB"
+157 http request GET https://registry.npmjs.org/nan
+158 http 200 https://registry.npmjs.org/nan
+159 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+159 verbose headers   etag: '"AJS9H2Q4TZEB8HVJ93AP2ONSH"',
+159 verbose headers   'content-type': 'application/json',
+159 verbose headers   'content-encoding': 'gzip',
+159 verbose headers   'cache-control': 'max-age=300',
+159 verbose headers   'content-length': '17162',
+159 verbose headers   'accept-ranges': 'bytes',
+159 verbose headers   date: 'Sun, 25 Sep 2016 02:19:45 GMT',
+159 verbose headers   via: '1.1 varnish',
+159 verbose headers   age: '78',
+159 verbose headers   connection: 'keep-alive',
+159 verbose headers   'x-served-by': 'cache-sjc3143-SJC',
+159 verbose headers   'x-cache': 'HIT',
+159 verbose headers   'x-cache-hits': '1',
+159 verbose headers   'x-timer': 'S1474769985.372869,VS0,VE0',
+159 verbose headers   vary: 'Accept-Encoding' }
+160 silly get cb [ 200,
+160 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+160 silly get     etag: '"AJS9H2Q4TZEB8HVJ93AP2ONSH"',
+160 silly get     'content-type': 'application/json',
+160 silly get     'content-encoding': 'gzip',
+160 silly get     'cache-control': 'max-age=300',
+160 silly get     'content-length': '17162',
+160 silly get     'accept-ranges': 'bytes',
+160 silly get     date: 'Sun, 25 Sep 2016 02:19:45 GMT',
+160 silly get     via: '1.1 varnish',
+160 silly get     age: '78',
+160 silly get     connection: 'keep-alive',
+160 silly get     'x-served-by': 'cache-sjc3143-SJC',
+160 silly get     'x-cache': 'HIT',
+160 silly get     'x-cache-hits': '1',
+160 silly get     'x-timer': 'S1474769985.372869,VS0,VE0',
+160 silly get     vary: 'Accept-Encoding' } ]
+161 verbose get saving nan to C:\Users\nitesh\AppData\Roaming\npm-cache\registry.npmjs.org\nan\.cache.json
+162 verbose correctMkdir C:\Users\nitesh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+163 silly addNameRange number 2 { name: 'nan', range: '>=2.3.2 <3.0.0', hasData: true }
+164 silly addNameRange versions [ 'nan',
+164 silly addNameRange   [ '0.3.0-wip',
+164 silly addNameRange     '0.3.0-wip2',
+164 silly addNameRange     '0.3.0',
+164 silly addNameRange     '0.3.1',
+164 silly addNameRange     '0.3.2',
+164 silly addNameRange     '0.4.0',
+164 silly addNameRange     '0.4.1',
+164 silly addNameRange     '0.4.2',
+164 silly addNameRange     '0.4.3',
+164 silly addNameRange     '0.4.4',
+164 silly addNameRange     '0.5.0',
+164 silly addNameRange     '0.5.1',
+164 silly addNameRange     '0.5.2',
+164 silly addNameRange     '0.6.0',
+164 silly addNameRange     '0.7.0',
+164 silly addNameRange     '0.7.1',
+164 silly addNameRange     '0.8.0',
+164 silly addNameRange     '1.0.0',
+164 silly addNameRange     '1.1.0',
+164 silly addNameRange     '1.1.1',
+164 silly addNameRange     '1.1.2',
+164 silly addNameRange     '1.2.0',
+164 silly addNameRange     '1.3.0',
+164 silly addNameRange     '1.4.0',
+164 silly addNameRange     '1.4.1',
+164 silly addNameRange     '1.5.0',
+164 silly addNameRange     '1.4.2',
+164 silly addNameRange     '1.4.3',
+164 silly addNameRange     '1.5.1',
+164 silly addNameRange     '1.5.2',
+164 silly addNameRange     '1.6.0',
+164 silly addNameRange     '1.5.3',
+164 silly addNameRange     '1.6.1',
+164 silly addNameRange     '1.6.2',
+164 silly addNameRange     '1.7.0',
+164 silly addNameRange     '1.8.0',
+164 silly addNameRange     '1.8.1',
+164 silly addNameRange     '1.8.2',
+164 silly addNameRange     '1.8.3',
+164 silly addNameRange     '1.8.4',
+164 silly addNameRange     '1.9.0',
+164 silly addNameRange     '2.0.0',
+164 silly addNameRange     '2.0.1',
+164 silly addNameRange     '2.0.2',
+164 silly addNameRange     '2.0.3',
+164 silly addNameRange     '2.0.4',
+164 silly addNameRange     '2.0.5',
+164 silly addNameRange     '2.0.6',
+164 silly addNameRange     '2.0.7',
+164 silly addNameRange     '2.0.8',
+164 silly addNameRange     '2.0.9',
+164 silly addNameRange     '2.1.0',
+164 silly addNameRange     '2.2.0',
+164 silly addNameRange     '2.2.1',
+164 silly addNameRange     '2.3.0',
+164 silly addNameRange     '2.3.1',
+164 silly addNameRange     '2.3.2',
+164 silly addNameRange     '2.3.3',
+164 silly addNameRange     '2.3.4',
+164 silly addNameRange     '2.3.5',
+164 silly addNameRange     '2.4.0' ] ]
+165 silly addNamed nan@2.4.0
+166 verbose addNamed "2.4.0" is a plain semver version for nan
+167 silly cache afterAdd nan@2.4.0
+168 verbose afterAdd C:\Users\nitesh\AppData\Roaming\npm-cache\nan\2.4.0\package\package.json not in flight; writing
+169 verbose correctMkdir C:\Users\nitesh\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+170 verbose afterAdd C:\Users\nitesh\AppData\Roaming\npm-cache\nan\2.4.0\package\package.json written
+171 silly install resolved [ { name: 'nan',
+171 silly install resolved     version: '2.4.0',
+171 silly install resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8 -> 6 compatibility',
+171 silly install resolved     main: 'include_dirs.js',
+171 silly install resolved     repository: { type: 'git', url: 'git://github.com/nodejs/nan.git' },
+171 silly install resolved     scripts:
+171 silly install resolved      { test: 'tap --gc --stderr test/js/*-test.js',
+171 silly install resolved        'rebuild-tests': 'node-gyp rebuild --msvs_version=2013 --directory test',
+171 silly install resolved        docs: 'doc/.build.sh' },
+171 silly install resolved     contributors:
+171 silly install resolved      [ [Object],
+171 silly install resolved        [Object],
+171 silly install resolved        [Object],
+171 silly install resolved        [Object],
+171 silly install resolved        [Object],
+171 silly install resolved        [Object],
+171 silly install resolved        [Object] ],
+171 silly install resolved     devDependencies:
+171 silly install resolved      { bindings: '~1.2.1',
+171 silly install resolved        commander: '^2.8.1',
+171 silly install resolved        glob: '^5.0.14',
+171 silly install resolved        'node-gyp': '~3.0.1',
+171 silly install resolved        'readable-stream': '^2.1.4',
+171 silly install resolved        tap: '~0.7.1',
+171 silly install resolved        xtend: '~4.0.0' },
+171 silly install resolved     license: 'MIT',
+171 silly install resolved     bugs: { url: 'https://github.com/nodejs/nan/issues' },
+171 silly install resolved     homepage: 'https://github.com/nodejs/nan#readme',
+171 silly install resolved     _id: 'nan@2.4.0',
+171 silly install resolved     _shasum: 'fb3c59d45fe4effe215f0b890f8adf6eb32d2232',
+171 silly install resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-2.4.0.tgz',
+171 silly install resolved     _from: 'nan@>=2.3.2 <3.0.0',
+171 silly install resolved     _npmVersion: '3.3.6',
+171 silly install resolved     _nodeVersion: '5.0.0',
+171 silly install resolved     _npmUser: { name: 'kkoopa', email: 'bbyholm@abo.fi' },
+171 silly install resolved     dist:
+171 silly install resolved      { shasum: 'fb3c59d45fe4effe215f0b890f8adf6eb32d2232',
+171 silly install resolved        tarball: 'https://registry.npmjs.org/nan/-/nan-2.4.0.tgz' },
+171 silly install resolved     maintainers: [ [Object], [Object] ],
+171 silly install resolved     _npmOperationalInternal:
+171 silly install resolved      { host: 'packages-16-east.internal.npmjs.com',
+171 silly install resolved        tmp: 'tmp/nan-2.4.0.tgz_1468158679820_0.6951719264034182' },
+171 silly install resolved     directories: {},
+171 silly install resolved     readme: 'ERROR: No README data found!' } ]
+172 info install nan@2.4.0 into C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+173 info installOne nan@2.4.0
+174 verbose installOne of nan to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas not in flight; installing
+175 verbose correctMkdir C:\Users\nitesh\AppData\Roaming\npm-cache\_locks correctMkdir not in flight; initializing
+176 verbose lock using C:\Users\nitesh\AppData\Roaming\npm-cache\_locks\nan-a2603a245581a2a8.lock for C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+177 silly install write writing nan 2.4.0 to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+178 verbose unbuild node_modules\canvas\node_modules\nan
+179 silly gentlyRm C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan is being purged from base C:\Users\nitesh\Desktop\amazon_deliverables\Kendal
+180 verbose gentlyRm don't care about contents; nuking C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+181 verbose tar unpack C:\Users\nitesh\AppData\Roaming\npm-cache\nan\2.4.0\package.tgz
+182 verbose tar unpacking to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+183 silly gentlyRm C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan is being purged
+184 verbose gentlyRm don't care about contents; nuking C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+185 silly gunzTarPerm modes [ '777', '666' ]
+186 silly gunzTarPerm extractEntry package.json
+187 silly gunzTarPerm modified mode [ 'package.json', 436, 438 ]
+188 silly gunzTarPerm extractEntry README.md
+189 silly gunzTarPerm modified mode [ 'README.md', 436, 438 ]
+190 silly gunzTarPerm extractEntry include_dirs.js
+191 silly gunzTarPerm modified mode [ 'include_dirs.js', 436, 438 ]
+192 silly gunzTarPerm extractEntry nan_callbacks_pre_12_inl.h
+193 silly gunzTarPerm modified mode [ 'nan_callbacks_pre_12_inl.h', 436, 438 ]
+194 silly gunzTarPerm extractEntry CHANGELOG.md
+195 silly gunzTarPerm modified mode [ 'CHANGELOG.md', 436, 438 ]
+196 silly gunzTarPerm extractEntry LICENSE.md
+197 silly gunzTarPerm modified mode [ 'LICENSE.md', 436, 438 ]
+198 silly gunzTarPerm extractEntry doc/node_misc.md
+199 silly gunzTarPerm modified mode [ 'doc/node_misc.md', 436, 438 ]
+200 silly gunzTarPerm extractEntry doc/asyncworker.md
+201 silly gunzTarPerm modified mode [ 'doc/asyncworker.md', 436, 438 ]
+202 silly gunzTarPerm extractEntry doc/callback.md
+203 silly gunzTarPerm modified mode [ 'doc/callback.md', 436, 438 ]
+204 silly gunzTarPerm extractEntry doc/converters.md
+205 silly gunzTarPerm modified mode [ 'doc/converters.md', 436, 438 ]
+206 silly gunzTarPerm extractEntry doc/errors.md
+207 silly gunzTarPerm modified mode [ 'doc/errors.md', 436, 438 ]
+208 silly gunzTarPerm extractEntry doc/maybe_types.md
+209 silly gunzTarPerm modified mode [ 'doc/maybe_types.md', 436, 438 ]
+210 silly gunzTarPerm extractEntry doc/methods.md
+211 silly gunzTarPerm modified mode [ 'doc/methods.md', 436, 438 ]
+212 silly gunzTarPerm extractEntry doc/new.md
+213 silly gunzTarPerm modified mode [ 'doc/new.md', 436, 438 ]
+214 silly gunzTarPerm extractEntry doc/buffers.md
+215 silly gunzTarPerm modified mode [ 'doc/buffers.md', 436, 438 ]
+216 silly gunzTarPerm extractEntry doc/object_wrappers.md
+217 silly gunzTarPerm modified mode [ 'doc/object_wrappers.md', 436, 438 ]
+218 silly gunzTarPerm extractEntry doc/persistent.md
+219 silly gunzTarPerm modified mode [ 'doc/persistent.md', 436, 438 ]
+220 silly gunzTarPerm extractEntry doc/scopes.md
+221 silly gunzTarPerm modified mode [ 'doc/scopes.md', 436, 438 ]
+222 silly gunzTarPerm extractEntry doc/script.md
+223 silly gunzTarPerm modified mode [ 'doc/script.md', 436, 438 ]
+224 silly gunzTarPerm extractEntry doc/string_bytes.md
+225 silly gunzTarPerm modified mode [ 'doc/string_bytes.md', 436, 438 ]
+226 silly gunzTarPerm extractEntry doc/v8_internals.md
+227 silly gunzTarPerm modified mode [ 'doc/v8_internals.md', 436, 438 ]
+228 silly gunzTarPerm extractEntry doc/v8_misc.md
+229 silly gunzTarPerm modified mode [ 'doc/v8_misc.md', 436, 438 ]
+230 silly gunzTarPerm extractEntry nan.h
+231 silly gunzTarPerm modified mode [ 'nan.h', 436, 438 ]
+232 silly gunzTarPerm extractEntry nan_callbacks.h
+233 silly gunzTarPerm modified mode [ 'nan_callbacks.h', 436, 438 ]
+234 silly gunzTarPerm extractEntry nan_callbacks_12_inl.h
+235 silly gunzTarPerm modified mode [ 'nan_callbacks_12_inl.h', 436, 438 ]
+236 silly gunzTarPerm extractEntry nan_converters.h
+237 silly gunzTarPerm modified mode [ 'nan_converters.h', 436, 438 ]
+238 silly gunzTarPerm extractEntry nan_converters_43_inl.h
+239 silly gunzTarPerm modified mode [ 'nan_converters_43_inl.h', 436, 438 ]
+240 silly gunzTarPerm extractEntry nan_converters_pre_43_inl.h
+241 silly gunzTarPerm modified mode [ 'nan_converters_pre_43_inl.h', 436, 438 ]
+242 silly gunzTarPerm extractEntry nan_implementation_12_inl.h
+243 silly gunzTarPerm modified mode [ 'nan_implementation_12_inl.h', 436, 438 ]
+244 silly gunzTarPerm extractEntry nan_implementation_pre_12_inl.h
+245 silly gunzTarPerm modified mode [ 'nan_implementation_pre_12_inl.h', 436, 438 ]
+246 silly gunzTarPerm extractEntry nan_maybe_43_inl.h
+247 silly gunzTarPerm modified mode [ 'nan_maybe_43_inl.h', 436, 438 ]
+248 silly gunzTarPerm extractEntry nan_maybe_pre_43_inl.h
+249 silly gunzTarPerm modified mode [ 'nan_maybe_pre_43_inl.h', 436, 438 ]
+250 silly gunzTarPerm extractEntry nan_new.h
+251 silly gunzTarPerm modified mode [ 'nan_new.h', 436, 438 ]
+252 silly gunzTarPerm extractEntry nan_object_wrap.h
+253 silly gunzTarPerm modified mode [ 'nan_object_wrap.h', 436, 438 ]
+254 silly gunzTarPerm extractEntry nan_persistent_12_inl.h
+255 silly gunzTarPerm modified mode [ 'nan_persistent_12_inl.h', 436, 438 ]
+256 silly gunzTarPerm extractEntry nan_persistent_pre_12_inl.h
+257 silly gunzTarPerm modified mode [ 'nan_persistent_pre_12_inl.h', 436, 438 ]
+258 silly gunzTarPerm extractEntry nan_string_bytes.h
+259 silly gunzTarPerm modified mode [ 'nan_string_bytes.h', 436, 438 ]
+260 silly gunzTarPerm extractEntry nan_typedarray_contents.h
+261 silly gunzTarPerm modified mode [ 'nan_typedarray_contents.h', 436, 438 ]
+262 silly gunzTarPerm extractEntry nan_weak.h
+263 silly gunzTarPerm modified mode [ 'nan_weak.h', 436, 438 ]
+264 silly gunzTarPerm extractEntry tools/package.json
+265 silly gunzTarPerm modified mode [ 'tools/package.json', 436, 438 ]
+266 silly gunzTarPerm extractEntry tools/README.md
+267 silly gunzTarPerm modified mode [ 'tools/README.md', 436, 438 ]
+268 silly gunzTarPerm extractEntry tools/1to2.js
+269 silly gunzTarPerm modified mode [ 'tools/1to2.js', 509, 511 ]
+270 verbose write writing to C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan\package.json
+271 info preinstall nan@2.4.0
+272 verbose readDependencies loading dependencies from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan\package.json
+273 verbose readDependencies loading dependencies from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan\package.json
+274 silly install resolved []
+275 verbose about to build C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+276 info build C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+277 info linkStuff nan@2.4.0
+278 silly linkStuff nan@2.4.0 has C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules as its parent node_modules
+279 verbose linkBins nan@2.4.0
+280 verbose linkMans nan@2.4.0
+281 verbose rebuildBundles nan@2.4.0
+282 info install nan@2.4.0
+283 info postinstall nan@2.4.0
+284 verbose unlock done using C:\Users\nitesh\AppData\Roaming\npm-cache\_locks\nan-a2603a245581a2a8.lock for C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas\node_modules\nan
+285 verbose about to build C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+286 info build C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+287 info linkStuff canvas@1.5.0
+288 silly linkStuff canvas@1.5.0 has C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules as its parent node_modules
+289 verbose linkBins canvas@1.5.0
+290 verbose linkMans canvas@1.5.0
+291 verbose rebuildBundles canvas@1.5.0
+292 verbose rebuildBundles [ 'nan' ]
+293 info install canvas@1.5.0
+294 verbose unsafe-perm in lifecycle true
+295 info canvas@1.5.0 Failed to exec install script
+296 verbose unlock done using C:\Users\nitesh\AppData\Roaming\npm-cache\_locks\canvas-fbca8e7af810e5ce.lock for C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+297 verbose stack Error: canvas@1.5.0 install: `node-gyp rebuild`
+297 verbose stack Exit status 1
+297 verbose stack     at EventEmitter.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\lifecycle.js:217:16)
+297 verbose stack     at emitTwo (events.js:87:13)
+297 verbose stack     at EventEmitter.emit (events.js:172:7)
+297 verbose stack     at ChildProcess.<anonymous> (C:\Program Files\nodejs\node_modules\npm\lib\utils\spawn.js:24:14)
+297 verbose stack     at emitTwo (events.js:87:13)
+297 verbose stack     at ChildProcess.emit (events.js:172:7)
+297 verbose stack     at maybeClose (internal/child_process.js:829:16)
+297 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+298 verbose pkgid canvas@1.5.0
+299 verbose cwd C:\Users\nitesh\Desktop\amazon_deliverables\Kendal
+300 error Windows_NT 10.0.14393
+301 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "canvas"
+302 error node v4.5.0
+303 error npm  v2.15.9
+304 error code ELIFECYCLE
+305 error canvas@1.5.0 install: `node-gyp rebuild`
+305 error Exit status 1
+306 error Failed at the canvas@1.5.0 install script 'node-gyp rebuild'.
+306 error This is most likely a problem with the canvas package,
+306 error not with npm itself.
+306 error Tell the author that this fails on your system:
+306 error     node-gyp rebuild
+306 error You can get information on how to open an issue for this project with:
+306 error     npm bugs canvas
+306 error Or if that isn't available, you can get their info via:
+306 error
+306 error     npm owner ls canvas
+306 error There is likely additional logging output above.
+307 verbose exit [ 1, true ]
+308 verbose unbuild node_modules\canvas
+309 info preuninstall canvas@1.5.0
+310 info uninstall canvas@1.5.0
+311 verbose unbuild rmStuff canvas@1.5.0 from C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules
+312 info postuninstall canvas@1.5.0
+313 silly gentlyRm C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas is being purged from base C:\Users\nitesh\Desktop\amazon_deliverables\Kendal
+314 verbose gentlyRm don't care about contents; nuking C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+315 silly vacuum-fs purging C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules\canvas
+316 silly vacuum-fs quitting because other entries in C:\Users\nitesh\Desktop\amazon_deliverables\Kendal\node_modules

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+	<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *">
+	
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+	<link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+	<script src="js/ng-cordova.min.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+	<script src='lib/signature_pad/signature_pad.js'></script>
+	<script src="js/pdfmake.js"></script>
+	<script src="js/vfs_fonts.js"></script>
+	<script src="lib/pdfjs-dist/build/pdf.js"></script>
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular-pdf-viewer/dist/angular-pdf-viewer.min.js"></script>
+	
+  </head>
+  <body ng-app="Kendal_App" ng-controller="Kendal_Controller">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable">
+		
+		<div class="buttons">
+			<button class="button" ng-show="admin_guardianDetailsShow" ng-click="admin_homePage()"><i class="ion-chevron-left"></i> Back</button>
+			<button class="button" ng-show="careTakerSubmittedDocumentShow" ng-click="back_guardianDetails()"><i class="ion-chevron-left"></i> Back</button>
+			<button class="button" ng-show="adminRequiredDocumentShow" ng-click="back_guardianDetails()"><i class="ion-chevron-left"></i> Back</button>
+			<button class="button" ng-show="imagework" ng-click="backFromImage()"><i class="ion-chevron-left"></i> Back</button>
+		</div>
+		
+		<h1 class="title" ng-show="admin_Home" align-title="center">Home Page</h1>
+		<h1 class="title" ng-show="admin_guardianDetailsShow" align-title="center">Guardian Details</h1>
+		<h1 class="title" ng-show="careTakerSubmittedDocumentShow" align-title="center">Submitted Documents</h1>
+		<h1 class="title" ng-show="adminRequiredDocumentShow" align-title="center">All documents</h1>
+		<h1 class="title" ng-show="careTaker_Home" align-title="center">Douments Pending for Signature</h1>
+		<h1 class="title" ng-show="imagework" align-title="center">Signature</h1>
+		
+		
+		<div class="buttons">
+			<button class="button button-clear button-dark" ng-show="logout_1" ng-click="logout()"><i class="icon ion-log-out"></i></button>
+		</div>
+		
+		
+      </ion-header-bar>
+      <ion-content class='has-header padding' scroll='false'>
+          
+		<form name="signIn_Form" novalidate>
+			<div class="list" ng-show="userSignIn">
+				<ion-toggle ng-model="userSignIn.admin" toggle-class="toggle-calm">Admin</ion-toggle>
+				<label class="item item-input">
+					<span class="input-label">Username</span>
+					<input type="text" ng-model="userSignIn.email" name="email"
+					 ng-blur="signIn_Form.email.$dirty && validateEmail(userSignIn)" maxlength="30" required autocomplete=off>
+				</label>
+		
+				
+				<label class="item item-input">
+					<span class="input-label">Password</span>
+					<input type="password" ng-model="userSignIn.password" name="password" maxlength="16" autocomplete=off  required>
+				</label>
+				<button class="button button-block button-positive" ng-disabled="signIn_Form.$invalid" ng-click="signIn_Operate(userSignIn)" >Sign In</button>
+			</div>
+		</form>  
+		  
+		<div ng-show="admin_Home">
+			<div class="row header">
+				<div class="col col-20"></div>
+				<div class="col col-40">Guardian Name</div>
+				<div class="col col-40">Care taker name</div>
+				
+			</div>
+			<div class="row" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="guardian_details in guardian_detailsArray" ng-click="getCareTakerDetails(guardian_details.caretaker_email)">
+				<div class="col col-20" ><i class="icon ion-plus"></i></div>
+				<div class="col col-40">{{guardian_details.guradian_name}}</div>
+				<div class="col col-40">{{guardian_details.caretaker_name}}</div>
+			</div>
+		</div>
+		
+		<div ng-show="careTaker_Home">
+			<div class="row header">
+				<div class="col col-20"></div>
+				<div class="col col-40">Document Name</div>
+				<div class="col col-40">Sign</div>
+			</div>
+			<div class="row" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="documentPending in documentPendingArray"  >
+				<div class="col col-20"><i class="icon ion-plus" ng-click="careTakerShowDocument(documentPending.documentName)"></i></div>
+				<div class="col col-40" ng-click="careTakerShowDocument(documentPending.documentName)">{{documentPending.documentName}}</div>
+				<button class="button col col-40" ng-click="sign(documentPending.documentName)">Sign</button>
+			</div>
+		</div>
+		 
+		
+		<div ng-show="admin_guardianDetailsShow">
+				<label class="item item-input">
+					<span class="input-label">Guardian Name</span>
+					<input type="text" ng-model="guardian_details.guradian_name" name="guradian_name" autocomplete=off required ng-disabled="true">
+				</label>
+				<label class="item item-input">
+					<span class="input-label">CareTaker Name</span>
+					<input type="text" ng-model="guardian_details.caretaker_name" name="caretaker_name" autocomplete=off required ng-disabled="true">
+				</label>
+				<label class="item item-input">
+					<span class="input-label">CareTaker Email</span>
+					<input type="text" name="caretaker_email" ng-model="guardian_details.caretaker_email" autocomplete=off required ng-disabled="true"/>
+				</label>
+				<label class="item item-input">
+					<span class="input-label">CareTaker Contact</span>
+					<input type="email" ng-model="guardian_details.caretaker_contact" name="caretaker_contact" autocomplete=off required ng-disabled="true">
+				</label>
+				<label class="item item-input">
+					<span class="input-label">CareTaker Address</span>
+					<input type="email" ng-model="guardian_details.caretaker_address" name="caretaker_address" autocomplete=off required ng-disabled="true">
+				</label>
+				<button class="button button-block icon-right ion-chevron-right button-positive" ng-click="careTakerSubmittedDocuments(guardian_details.caretaker_email)" ng-disabled="">Submitted Documents</button>
+				<button class="button button-block icon-right ion-chevron-right button-positive" ng-click="adminrequiredDocuments()" ng-disabled="">New Documents Required</button>
+				
+		</div>
+
+		
+		<div ng-show="adminRequiredDocumentShow">
+			<div class="row header">
+				<div class="col col-20"></div>
+				<div class="col col-40">Document Name</div>
+				<div class="col col-40">Send</div>
+			</div>
+			<div class="row" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="requiredDocuments in requiredDocumentArray">
+				<div class="col col-20" ng-click="showRequiredDocument(requiredDocuments)"><i class="icon ion-plus"></i></div>
+				<div class="col col-40" ng-click="showRequiredDocument(requiredDocuments)">{{requiredDocuments}}</div>
+				<button class="button col col-40" ng-click="send(guardian_details.caretaker_email,requiredDocuments)">Send</button>
+			</div>
+		</div>
+
+
+		<div ng-show="careTakerSubmittedDocumentShow">
+			<div class="row header">
+				<div class="col col-20"></div>
+				<div class="col col-80">Document Name</div>
+			</div>
+			<div class="row" ng-class-odd="'odd'" ng-class-even="'even'" ng-repeat="careTakerSubmittedDocuments in careTakerSubmittedDocumentsArray" ng-click="showSubmittedDocument(careTakerSubmittedDocuments)">
+				<div class="col col-20"><i class="icon ion-plus"></i></div>
+				<div class="col col-80">{{careTakerSubmittedDocuments}}</div>
+			</div>
+		</div>
+
+		
+		  
+		<div ng-show="imagework">  
+		  <canvas id='signatureCanvas' width='300' height='180' style='border: 1px solid black;'></canvas>
+          <div class='button-bar'>
+              <a class='button button-positive' ng-click='clearCanvas()'>Clear</a>
+              <a class='button button-positive' ng-click='saveCanvas()'>Save</a>
+          </div>
+          <br>
+		</div>
+		
+
+		<ion-slide-box pager-click="navSlide(index)" auto-play="true" does-continue="true">
+            <ion-slide>
+			<div ng-show="slider_image" class="item item-image" style="height: auto" no-repeat fixed>
+                <img ng-src="https://i.imgsafe.org/82f525859b.jpeg">
+            </div>
+			</ion-slide>
+            <ion-slide>
+            <div class="item item-image" ng-show="slider_image" style="height: auto">
+				<img ng-src="https://i.imgsafe.org/82f56971f5.jpeg">
+            </div>
+			</ion-slide>
+            <ion-slide>
+			<div class="item item-image" ng-show="slider_image" style="height: auto">
+                <img ng-src="https://i.imgsafe.org/82f5517477.jpeg">
+            </div>
+			</ion-slide>
+        </ion-slide-box>
+		
+		
+		<!-- care taker code -->
+		
+			
+		<form name="signUp_Form" novalidate>
+			<div class="list" ng-show="userSignUp">					
+					
+					<label class="item item-input">
+						<span class="input-label">First Name</span>
+						<input type="text" ng-model="signUp_Form_Details.name" name="name" maxlength="20" autocomplete=off required>
+					</label>
+					
+					<label class="item item-input">
+						<span class="input-label">Email</span>
+						<input type="text" ng-model="signUp_Form_Details.email" name="email" maxlength="30" autocomplete=off required>
+					</label>
+					
+					<label class="item item-input">
+						<span class="input-label">Password</span>
+						<input type="password" ng-model="signUp_Form_Details.password" name="password" maxlength="20" autocomplete=off required>
+					</label>
+					
+					<label class="item item-input">
+						<span class="input-label">Contact</span>
+						<input type="text" name="contact" ng-model="signUp_Form_Details.contact" maxlength="10" autocomplete=off required/>
+					</label>
+					
+					<label class="item item-input">
+						<span class="input-label">Address</span>
+						<input type="text" name="address" ng-model="signUp_Form_Details.address" maxlength="100" autocomplete=off required/>
+					</label>
+					
+					
+					
+					<div class="button-bar">
+						<button class="button button-full icon-right ion-chevron-right button-positive" ng-click="signUp_Operate(signUp_Form_Details)" ng-disabled="signUp_Form.$invalid">Register</button>
+					</div>
+				
+			</div>
+		</form>	
+		
+		
+		
+		<!-- -->
+		
+		
+		
+		
+		
+		
+      </ion-content>
+	  <ion-footer-bar class="bar bar-footer">
+		<div class="button-bar" ng-show="loginFooter">
+			<button class="button button-clear button-dark" ng-click="signIn_Show()"><i class="icon ion-home"></i>Sign In</button>
+			<button class="button button-clear button-dark" ng-click="signUp_Show()"><i class="icon ion-card"></i>Sign Up</button>
+		</div>
+		<div class="button-bar" ng-show="adminFooter">
+			<button class="button button-clear button-dark" ng-click="admin_homePage()"><i class="icon ion-home"></i></button>
+			<button class="button button-clear button-dark" ng-click=""><i class="icon ion-navicon-round"></i></button>
+		</div>
+		<div class="button-bar" ng-show="careTakerFooter">
+			<button class="button button-clear button-dark" ng-click="careTaker_homePage()"><i class="icon ion-home"></i></button>
+			<button class="button button-clear button-dark" ng-click="careTakerShowSubmittedDocuments()"><i class="icon ion-navicon-round"></i></button>
+		</div>
+	</ion-footer-bar>
+    </ion-pane>
+  </body>
+</html>
